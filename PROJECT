@@ -1,0 +1,14 @@
+domain: syncbug.io
+layout:
+- go.kubebuilder.io/v3
+projectName: patch-cert-manager-for-ingress
+repo: patch-cert-manager-for-ingress
+resources:
+- group: extensions
+  kind: Ingress
+  path: k8s.io/api/extensions/v1beta1
+  version: v1beta1
+  webhooks:
+    defaulting: true
+    webhookVersion: v1
+version: "3"

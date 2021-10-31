@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: frontend
+spec:
+  rules:
+  - host:  frontend.com
+    http:
+      paths:
+      - path: /web-frontend/frontend.php
+        backend:
+          serviceName: frontend
+          servicePort: 80
